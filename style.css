@@ -23,6 +23,14 @@ h2 {
   font-size: 20px;
 }
 
+.event-flyer {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px;
+  border-radius: 8px;
+}
+
 .meta-box {
   background: #f9f9f9;
   padding: 12px;
