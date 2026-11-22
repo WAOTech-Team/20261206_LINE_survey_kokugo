@@ -5,14 +5,14 @@ const GAS_URL = "$GAS_URL";
 // ※ true / false は必ず小文字で書く（True / False だと画面が動かなくなる）
 
 // 受付期間の制限（true: 期間外は回答できない / false: いつでも回答できる）
-const ENABLE_PERIOD = false;
+const ENABLE_PERIOD = true;
 const PERIOD_START = new Date("2026-12-06T11:30:00+09:00");
 const PERIOD_END = new Date("2026-12-07T23:59:59+09:00");
 
 // 重複回答の防止（true: 同じ端末からは1回まで / false: 何回でも回答できる）
 const ENABLE_DUPLICATE_CHECK = true;
 // 回答済みの記録名。変えると、それまでの回答済み記録がリセットされる
-const ANSWERED_KEY = "survey-answered-20261206";
+const ANSWERED_KEY = "survey-answered-20261206to07";
 
 // =====================================================================
 
