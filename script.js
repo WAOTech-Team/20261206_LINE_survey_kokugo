@@ -138,7 +138,7 @@ function getClosedReason() {
   if (ENABLE_PERIOD) {
     const now = new Date();
     if (now < PERIOD_START) {
-      return { title: "受付開始前です", text: `アンケートは${formatJst(PERIOD_START, true)}から受け付けます。` };
+      return { title: "受付開始前です", text: `アンケートは${formatJst(PERIOD_START, true)}から受け付けます。`, flyer: true };
     }
     if (now > PERIOD_END) {
       return { title: "受付終了", text: "アンケート受付期間は終了しました。ご協力誠にありがとうございます。" };
@@ -156,6 +156,7 @@ function showClosed(reason) {
   document.getElementById("survey-form").style.display = "none";
   document.getElementById("closed-title").innerText = reason.title;
   document.getElementById("closed-text").innerText = reason.text;
+  document.getElementById("closed-flyer").style.display = reason.flyer ? "block" : "none";
   document.getElementById("closed-step").style.display = "block";
   window.scrollTo(0, 0);
 }
